@@ -41,13 +41,14 @@ main {
   border-right: 1px solid #333;
 }
 
-/* ===== CENTER SCANNER CONTENT ===== */
+/* ===== PERFECT CENTERING FOR LEFT BLOCK ===== */
 .scanner-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;     /* centers QR + button */
 }
 
+/* Keep heading readable */
 .scanner-block h1 {
   align-self: flex-start;
 }
@@ -66,7 +67,7 @@ h1 {
   background: black;
   border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto; /* HARD center */
 }
 
 #reader {
@@ -74,8 +75,10 @@ h1 {
   height: 100%;
 }
 
-/* Button (centered by flex) */
+/* Button */
 button {
+  display: block;
+  margin: 0 auto;
   background: #39ff14;
   border: none;
   border-radius: 50px;
@@ -86,11 +89,12 @@ button {
   color: black;
 }
 
-/* Status */
+/* Status — CENTERED */
 #status {
   margin-top: 15px;
   font-size: 18px;
   color: #aaa;
+  text-align: center;
 }
 
 /* Table */
