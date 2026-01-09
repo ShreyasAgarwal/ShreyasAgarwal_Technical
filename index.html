@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Check-In</title>
+
+  <!-- QR Scanner -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img
+      src="https://media.geeksforgeeks.org/gfg-gg-logo.svg"
+      alt="GeeksforGeeks"
+      class="logo"
+    >
+  </header>
+
+  <!-- Main Layout -->
+  <main>
+
+    <!-- LEFT: Scanner -->
+    <section class="block">
+      <h1>Event Check-In</h1>
+
+      <div id="reader"></div>
+
+      <button id="startScanBtn">Start Scanning</button>
+
+      <p id="status">Click start scanning to begin</p>
+    </section>
+
+    <!-- RIGHT: Attendee List -->
+    <section class="block">
+      <h1>Attendees</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="attendanceTable"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
