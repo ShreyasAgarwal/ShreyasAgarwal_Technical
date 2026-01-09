@@ -22,11 +22,13 @@ header {
   opacity: 0.75;
 }
 
+/* ===== MAIN LAYOUT ===== */
 main {
   display: flex;
   flex: 1;
 }
 
+/* Desktop: side by side */
 .block {
   flex: 1;
   padding: 40px;
@@ -37,13 +39,14 @@ main {
   border-right: 1px solid #333;
 }
 
+/* ===== HEADINGS ===== */
 h1 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 32px;
 }
 
-/* Square QR area */
+/* ===== SCANNER ===== */
 .scanner-box {
   width: 280px;
   height: 280px;
@@ -58,7 +61,7 @@ h1 {
   height: 100%;
 }
 
-/* Button */
+/* ===== BUTTON ===== */
 button {
   background: #39ff14;
   border: none;
@@ -76,7 +79,7 @@ button {
   color: #aaa;
 }
 
-/* Table */
+/* ===== TABLE ===== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -92,6 +95,7 @@ th {
   color: #39ff14;
 }
 
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 10px;
@@ -102,4 +106,30 @@ footer {
 
 footer strong {
   color: #39ff14;
+}
+
+/* For mobile phones */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* STACK BLOCKS */
+  }
+
+  .block:first-child {
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .scanner-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
