@@ -8,6 +8,8 @@ body {
   background: #0b0b0b;
   color: white;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -24,7 +26,7 @@ header {
 /* Main layout */
 main {
   display: flex;
-  height: calc(100vh - 80px);
+  flex: 1;
 }
 
 /* Blocks */
@@ -52,7 +54,7 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* Green Rounded Button (Check-In style) */
+/* Green Rounded Button */
 button {
   background: #39ff14;
   border: none;
@@ -90,5 +92,18 @@ th, td {
 }
 
 th {
+  color: #39ff14;
+}
+
+/* Footer / Credits */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #080808;
+  font-size: 14px;
+  color: #888;
+}
+
+footer strong {
   color: #39ff14;
 }
