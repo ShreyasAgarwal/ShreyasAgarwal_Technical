@@ -28,7 +28,7 @@ async function startScanning() {
     statusText.textContent = "Scanner is running";
     statusText.style.color = "#39ff14";
 
-  } catch (err) {
+  } catch {
     statusText.textContent = "Camera access failed";
     statusText.style.color = "red";
   }
