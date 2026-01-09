@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <title>Event Check-In</title>
 
-  <!-- QR Scanner -->
+  <!-- QR Library -->
   <script src="https://unpkg.com/html5-qrcode"></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <img
       src="https://media.geeksforgeeks.org/gfg-gg-logo.svg"
@@ -20,21 +19,23 @@
     >
   </header>
 
-  <!-- Main Layout -->
   <main>
 
-    <!-- LEFT: Scanner -->
+    <!-- LEFT -->
     <section class="block">
       <h1>Event Check-In</h1>
 
-      <div id="reader"></div>
+      <div class="scanner-box">
+        <div id="reader"></div>
+      </div>
 
-      <button id="startScanBtn">Start Scanning</button>
+      <!-- Button OUTSIDE scanner -->
+      <button id="scanToggleBtn">Start Scanning</button>
 
-      <p id="status">Click start scanning to begin</p>
+      <p id="status">Scanner is stopped</p>
     </section>
 
-    <!-- RIGHT: Attendee List -->
+    <!-- RIGHT -->
     <section class="block">
       <h1>Attendees</h1>
 
@@ -52,7 +53,6 @@
 
   </main>
 
-  <!-- Credits -->
   <footer>
     <p>Designed & Developed by <strong>Shreyas Agarwal</strong></p>
   </footer>
